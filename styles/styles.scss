@@ -1,0 +1,30 @@
+@import "config";
+
+html {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height:100%;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p {
+    margin-bottom:0;
+}
+
+body {
+    line-height: 1.6;
+    font-size:1.6rem;
+    margin:0;
+    background:color(primary-green);
+    @include flexCenter(column);
+    font-family: $font-stack;
+
+    @include mobileSize {
+            background:color(primary-red)
+        }
+};

@@ -1,0 +1,36 @@
+$colors: (
+    primary-red: hsl(0, 100%, 74%),
+    primary-green: hsl(154, 59%, 51%),
+
+    accent-Blue: hsl(248, 32%, 49%),
+    
+    neutral-DarkBlue: hsl(249, 10%, 26%),
+    neutral-GrayishBlue: hsl(246, 25%, 77%),
+);
+
+@function color($colorname ) {
+    @return map-get($colors, $colorname)
+};
+
+
+
+@mixin flexCenter($direction) {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+// -------------------------------------------------------------------media query mixins-------------------------------------------------
+@mixin mobileSize {
+    @media screen and (max-width:414px) {@content;}
+};
+
+@mixin DesktopSize {
+    @media screen and (min-width:1200px) {@content;}
+};
+
+
+// ------------------------------------------------------------------------variables------------------------------------------------------
+$font-stack: "Poppins", arial, sans-serif;
