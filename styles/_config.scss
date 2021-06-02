@@ -24,7 +24,7 @@ $colors: (
     }
 }
 
-@mixin DesktopSize {
+@mixin desktopSize {
     @media screen and (min-width: 1200px) {
         @content;
     }
@@ -32,3 +32,4 @@ $colors: (
 
 // --------------------------------------variables------------------------------------------------------
 $font-stack: "Poppins", arial, sans-serif;
+$padding: 1em;

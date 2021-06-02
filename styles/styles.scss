@@ -2,29 +2,52 @@
 
 html {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
-    height:100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-size: 62.5%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4, p {
-    margin-bottom:0;
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-bottom: 0;
 }
 
 body {
+    background: url("../images/bg-intro-desktop.png"), color(primary-red);
     line-height: 1.6;
-    font-size:1.6rem;
-    margin:0;
-    background:color(primary-green);
-    @include flexCenter(column);
+    font-size: 1.6rem;
+    margin: 0;
+    height: 100%;
+    @include flexCenter(row);
     font-family: $font-stack;
 
-    @include mobileSize {
-            background:color(primary-red)
-        }
-};
+    // @include desktopSize {
+    //     background: color(primary-red);
+    // }
+}
+
+.title--wrap {
+    outline: solid black 2px;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding;
+}
+
+.form--wrap {
+    width: 500px;
+    height: 600px;
+    outline: solid black 2px;
+}
