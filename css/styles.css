@@ -1,3 +1,136 @@
+.form {
+  width: 100%;
+}
+
+.form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1em 0;
+}
+
+.form-control .input--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  outline: #b9b6d3 solid 2px;
+  border-radius: 5px;
+  background: white;
+}
+
+.form-control input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  border: none;
+  padding: 0.5em;
+  margin-left: 1em;
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control small {
+  width: 100%;
+  text-align: end;
+  margin-top: 0.5em;
+  color: #ff7a7a;
+  display: none;
+}
+
+.form-control img {
+  padding: 0 1em 0 0;
+  display: none;
+}
+
+.form--wrap .form__banner {
+  background: #6055a5;
+  color: white;
+  text-align: center;
+  padding: 0.75em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
+}
+
+.form--wrap .form__content {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
+  background: white;
+  height: 100%;
+  margin-top: 1em;
+  padding: 2em 2em 1em 2em;
+  border-radius: 5px 5px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-footer {
+  background: white;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-footer .trial-btn {
+  background: #38cc8c;
+  border: none;
+  padding: 1em;
+  margin-top: 1em;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-footer .trial-btn:hover {
+  background: #71d0a7;
+}
+
+.form-footer__p {
+  font-size: 1.2rem;
+  margin-top: 1em;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19,7 +152,7 @@ h2,
 h3,
 h4,
 p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 body {
@@ -27,7 +160,7 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,12 +175,20 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   font-family: "Poppins", arial, sans-serif;
+  padding: 1em;
 }
 
-.title--wrap {
-  outline: solid black 2px;
-  width: 500px;
-  height: 400px;
+@media screen and (max-width: 800px) {
+  body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.title--wrap,
+.form--wrap {
+  max-width: 500px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,9 +202,28 @@ body {
   padding: 1em;
 }
 
-.form--wrap {
-  width: 500px;
-  height: 600px;
-  outline: solid black 2px;
+.title--wrap {
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .title--wrap {
+    text-align: center;
+  }
+}
+
+.title--wrap {
+  color: white;
+}
+
+.title--wrap .title__h1 {
+  font-size: 3.4rem;
+  max-width: 20ch;
+  line-height: 1.2;
+}
+
+.title--wrap .title__p {
+  margin-top: 2em;
+  max-width: 50ch;
 }
 /*# sourceMappingURL=styles.css.map */

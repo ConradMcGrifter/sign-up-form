@@ -1,0 +1,97 @@
+.form {
+    width: 100%;
+}
+
+.form-control {
+    // background: yellow;
+    @include flexCenter(row);
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1em 0;
+
+    .input--wrap {
+        @include flexCenter(row);
+        justify-content: flex-start;
+        width: 100%;
+        outline: color(neutral-GrayishBlue) solid 2px;
+        border-radius: 5px;
+        background: white;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        font-size: 1.8rem;
+        border: none;
+        padding: 0.5em;
+
+        margin-left: 1em;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    small {
+        width: 100%;
+        text-align: end;
+        margin-top: 0.5em;
+        color: color(primary-red);
+        display: none;
+    }
+
+    img {
+        padding: 0 1em 0 0;
+        display: none;
+    }
+}
+
+.form--wrap {
+    .form__banner {
+        background: color(accent-Blue);
+        color: white;
+        text-align: center;
+        padding: 0.75em;
+        border-radius: 5px;
+        box-shadow: $boxShadow;
+    }
+
+    .form__content {
+        box-shadow: $boxShadow;
+        background: white;
+        height: 100%;
+        margin-top: 1em;
+        padding: 2em 2em 1em 2em;
+        border-radius: 5px 5px 0 0;
+        @include flexCenter(column);
+    }
+}
+
+.form-footer {
+    background: white;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    // padding: 0 2em 1em 2em;
+    width: 100%;
+
+    .trial-btn {
+        background: color(primary-green);
+        border: none;
+        padding: 1em;
+        margin-top: 1em;
+        width: 100%;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        // box-shadow: 0 3px 0px hsla(154, 73%, 30%, 0.712);
+
+        &:hover {
+            background: hsl(154, 50%, 63%);
+        }
+    }
+
+    &__p {
+        font-size: 1.2rem;
+        margin-top: 1em;
+    }
+}

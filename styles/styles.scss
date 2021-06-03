@@ -1,4 +1,4 @@
-@import "config";
+@import "config", "form";
 
 html {
     box-sizing: border-box;
@@ -19,7 +19,7 @@ h2,
 h3,
 h4,
 p {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 body {
@@ -27,27 +27,51 @@ body {
     line-height: 1.6;
     font-size: 1.6rem;
     margin: 0;
-    height: 100%;
+    min-height: 100%;
     @include flexCenter(row);
+    // flex-wrap: wrap;
     font-family: $font-stack;
-
+    padding: $padding;
     // @include desktopSize {
     //     background: color(primary-red);
     // }
+
+    @include mobileSize {
+        flex-wrap: wrap;
+    }
 }
 
-.title--wrap {
-    outline: solid black 2px;
-    width: 500px;
-    height: 400px;
+.title--wrap,
+.form--wrap {
+    // outline: solid black 2px;
+    max-width: 500px;
+    width: 100%;
+    // max-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: $padding;
 }
 
-.form--wrap {
-    width: 500px;
-    height: 600px;
-    outline: solid black 2px;
+.title--wrap {
+    height: 100%;
+
+    @include mobileSize {
+        text-align: center;
+    }
+}
+
+.title--wrap {
+    color: white;
+
+    .title__h1 {
+        font-size: 3.4rem;
+        max-width: 20ch;
+        line-height: 1.2;
+    }
+
+    .title__p {
+        margin-top: 2em;
+        max-width: 50ch;
+    }
 }
